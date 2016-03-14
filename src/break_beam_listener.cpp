@@ -1,3 +1,9 @@
+/**
+ * \file break_beam_listener.cpp
+ * \author Zhen Zeng (zengzhen@umich.edu)
+ * \brief listen to topic /break_beam and close left gripper when the beams are broken
+ */
+
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 #include "baxter_core_msgs/EndEffectorCommand.h"

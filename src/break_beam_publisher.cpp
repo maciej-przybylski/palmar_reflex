@@ -1,3 +1,9 @@
+/**
+ * \file break_beam_publisher.cpp
+ * \author Zhen Zeng (zengzhen@umich.edu)
+ * \brief listen to serial port and publish break beam status through topic /break_beam
+ */
+
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 
