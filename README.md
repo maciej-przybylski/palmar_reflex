@@ -6,7 +6,7 @@ alt="IMAGE ALT TEXT HERE" width="640" height="480" border="10" /></a>
 
 1. Install Arduino: https://www.arduino.cc/en/Main/Software, untar it in your directory.
 
-2. Copy this package `palmar_reflex` to your ros workspace, e.g. row_ws/src, then build the package.
+2. Copy this repository `palmar_reflex` to your ros workspace, e.g. row_ws/src, then build the package.
 
 3. Connect the break beam sensors (attached on Baxter's girppers) to the arduino board. Details about the sensors that we are using is available at https://learn.adafruit.com/ir-breakbeam-sensors.
 
