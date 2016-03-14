@@ -19,7 +19,7 @@ alt="IMAGE ALT TEXT HERE" width="640" height="480" border="10" /></a>
   
   Make sure that under Menu/Tools/, 
   * Board is selected as the version of the connected arduino board, e.g. "Arduino/Genuino Uno" in our case
-  * Port is automatically selected. 
+  * Port is automatically selected
   * Add read&write permission to the serial port that arduino is using. For example, if "/dev/ttyACM0" is the one displayed under Arduino menu, then 
 
     ```
@@ -28,12 +28,11 @@ alt="IMAGE ALT TEXT HERE" width="640" height="480" border="10" /></a>
     To permanently change the permission of the serial port, please refer to this thread: http://askubuntu.com/questions/58119/changing-permissions-on-serial-port.
   * Open Menu/Tools/Serial Monitor, and check whether there are data coming through the serial port, with your hand waving in between Baxter's grippers, thus chaning the break beam status.
   
-5. Start Baxter, and calibrate the left gripper first 
+5. Start Baxter, and calibrate the left gripper (then press "c") 
 
   ```
   $ rosrun baxter_example gripper_keyboard.py
   ```
-  then press "c".
   
 6. Launch ros node that publishes the break beam to topic "/break_beam" status by reading data from the serial port,
 
