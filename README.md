@@ -1,7 +1,7 @@
 # palmar_reflex
 Enables Baxter to close its gripper when break beams detect a break, which mimics the palmar grasp reflex in children<br>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=https://youtu.be/aQBKxrKN0UA
-" target="_blank"><img src="http://img.youtube.com/vi/https://youtu.be/aQBKxrKN0UA/0.jpg" 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=aQBKxrKN0UA
+" target="_blank"><img src="http://img.youtube.com/vi/aQBKxrKN0UA/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="640" height="480" border="10" /></a>
 
 1. Install Arduino: https://www.arduino.cc/en/Main/Software, untar it in your directory.
