@@ -37,7 +37,7 @@ alt="IMAGE ALT TEXT HERE" width="640" height="480" border="10" /></a>
 6. Launch ros node that publishes the break beam to topic "/break_beam" status by reading data from the serial port,
 
   ```
-  $ rosrun break_beam break_beam_publisher
+  $ rosrun break_beam break_beam_publisher SERIAL_PORT_NAME
   ```
 
 7. In another terminal launch ros node that listens to topic "/break_beam" and commands the gripper to close when "Broken" is detected,
