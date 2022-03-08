@@ -27,12 +27,12 @@ char buf[100];
 
 int main(int argc, char **argv)
 {
-	if(argc!=2)
-	{
-		printf("Usage: break_beam_publisher portname\n");
-		printf("e.g. break_beam_publisher /dev/ttyACM0\n");
-		exit(1);
-	}
+	// if(argc!=2)
+	// {
+	// 	printf("Usage: break_beam_publisher portname\n");
+	// 	printf("e.g. break_beam_publisher /dev/ttyACM0\n");
+	// 	exit(1);
+	// }
 	
 	ros::init(argc, argv, "break_beam_publisher");
 	ros::NodeHandle node;
@@ -104,15 +104,21 @@ int main(int argc, char **argv)
 // 	int n = read(fd, b, 1);
 	int n;
 	int i=0;
-	while (1)
+	while (ros::ok())
 	{
 		i = 0;
 		do{
 			n = read(fd, b, 1);	
-			while (n <= 0) { n = read(fd, b, 1);	}
+			while (n <= 0) { 
+				n = read(fd, b, 1);	
+				if(!ros::ok()) break;
+			}
 			if(b[0]!='\n')
 				buf[i] = b[0];
 			i++;
+				
+			if(!ros::ok()) break;
+			
 		}while(b[0] != '\n');
 		
 		if(buf[0]=='U')

@@ -31,7 +31,7 @@ alt="IMAGE ALT TEXT HERE" width="640" height="480" border="10" /></a>
 5. Start Baxter, and calibrate the left gripper (then press "c") 
 
   ```
-  $ rosrun baxter_example gripper_keyboard.py
+  $ rosrun baxter_examples gripper_keyboard.py
   ```
   
 6. Launch ros node that publishes the break beam to topic "/break_beam" status by reading data from the serial port,
