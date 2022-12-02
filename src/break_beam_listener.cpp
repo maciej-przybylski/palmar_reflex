@@ -17,6 +17,8 @@ void breakbeamCallback(const std_msgs::String::ConstPtr& msg)
 	ROS_INFO("listen %s", msg->data.c_str());
 	if(strcmp(msg->data.c_str(), break_beam)==0)
 	{
+		// ros::Duration d(1.0);
+		// d.sleep();
 		baxter_core_msgs::EndEffectorCommand gripper_command;
 		gripper_command.id = 65664;
 	// 	gripper_command.command = baxter_core_msgs::EndEffectorCommand::CMD_CONFIGURE;
@@ -65,7 +67,7 @@ int main(int argc, char **argv)
 	 * is the number of messages that will be buffered up before beginning to throw
 	 * away the oldest ones.
 	 */
-	ros::Subscriber sub = n.subscribe("break_beam", 1000, breakbeamCallback);
+	ros::Subscriber sub = n.subscribe("break_beam", 1, breakbeamCallback);
 	gripper_publiser = n.advertise<baxter_core_msgs::EndEffectorCommand>("/robot/end_effector/left_gripper/command", 1);
 	
 	/**
